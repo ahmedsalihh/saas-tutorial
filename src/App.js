@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import Alien from './resources/images/img-2.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <>
+      <nav className='navbar'>
+        <a href='/' className='navbar__logo'>
+          SAAS
         </a>
-      </header>
-    </div>
+        <div className='navbar__bars'>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <div className='navbar__menu'>
+          <a href='/' className='navbar__menu--links'>
+            Home
+          </a>
+          <a href='/' className='navbar__menu--links'>
+            Products
+          </a>
+          <a href='/' className='navbar__menu--links'>
+            Services
+          </a>
+          <a href='/' id='button' className='navbar__menu--links'>
+            Sign Up
+          </a>
+        </div>
+      </nav>
+
+      <div className='hero'>
+        <div className='hero__container'>
+          <div className='hero__container--left'>
+            <h1>They are coming</h1>
+            <h2>Be Prepared</h2>
+            <h3>Sign Up</h3>
+            <button className='hero__container--btn'>
+              <a href='#'>Sign Up</a>
+            </button>
+          </div>
+          <div className='hero__container--right'>
+            <img src={Alien} alt='alien' className='hero__container--img' />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
